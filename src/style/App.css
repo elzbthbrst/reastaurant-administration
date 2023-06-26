@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+}
+
+.screen {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+
+.header {
+  text-align: center;
+  /* color: #fff; */
+  height: 64px;
+  padding-inline: 50px;
+  line-height: 64px;
+  background-color: #fff;
+}
+
+.content {
+  text-align: center;
+  line-height: 60px;
+  color: #323e42;
+  background-color: #fff;
+}
+
+.table-card {
+  width: 300px !important; 
+  
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bg-color-peachy {
+  background: rgba(255, 161, 120, 0.1);
+}
+
+.waiter-form {
+  min-width: 600px;
+  margin-top: 30px;
+}
+
+.with-70 {
+  width: 70vw;
+}
+.width-200 {
+  width: 200px !important;
+}
+.width-100 {
+  width: 100px;
+}
+.margin-center {
+  margin: 0 auto;
+}
