@@ -1,3 +1,6 @@
+
+const COUNT_TEMPLATE = /^\d{1,2}$/
+
 export const orderRules = {
     'tableId' : [
         {
@@ -21,6 +24,10 @@ export const orderRules = {
 
     ],
     'count' : [
+        {
+            pattern: COUNT_TEMPLATE,
+            message: 'Must be not longer then 3 symbols'
+        },
         {
             required: true,
             message: 'Missing price',
