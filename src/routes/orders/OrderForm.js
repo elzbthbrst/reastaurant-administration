@@ -6,7 +6,7 @@ import { selectOrderEdit, selectOptions } from '../../store/selectors'
 import { fetchJointListTbWtDs } from '../../store/actions/jointActions'
 import { save, fetchOneOrder } from '../../store/actions/orderActions'
 import { orderRules } from '../../extra/form-rules/orderRules';
-import { getDishList } from '../../extra/extra-functions/getDishList';
+import { getDishList } from '../../extra/order-functions/getDishList';
 import OrderFormSelectDishes from './OrderFormSelectDishes';
 import FormWrapper from '../../extra/FormWrapper';
 

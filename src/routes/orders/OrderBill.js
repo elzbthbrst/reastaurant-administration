@@ -6,7 +6,7 @@ import { selectOrderBillFull } from '../../store/selectors'
 import { fetchDishList } from '../../store/actions/dishActions';
 import { fetchOneBillOrder, deleteOrder, clearBillOrder } from '../../store/actions/orderActions'
 import {getOrderColumnsBill} from '../../extra/columns/getOrderColumns'
-import { getTotalSum } from '../../extra/extra-functions/getTotalSum';
+import { getTotalSum } from '../../extra/order-functions/getTotalSum';
 import FormWrapper from '../../extra/FormWrapper';
 
 export default function OrderBill() {

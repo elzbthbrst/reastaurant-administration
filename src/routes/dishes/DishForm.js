@@ -1,5 +1,5 @@
 import { Button, Row, Col, Form, Input } from 'antd';
-import { dishRules } from '../../extra/formRules/dishRules';
+import { dishRules } from '../../extra/form-rules/dishRules';
 import FormWrapper from '../../extra/FormWrapper';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectDishEdit } from '../../store/selectors';

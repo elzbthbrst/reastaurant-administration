@@ -1,18 +1,19 @@
 import '../../style/App.css'
 import { Button, Form, Input, Row, Col } from 'antd';
-import { tableRules } from '../../extra/form-rules/tableRules';
+import { getTableRules } from '../../extra/form-rules/tableRules';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectTableEdit } from '../../store/selectors';
+import { selectTableEdit, selectTableList } from '../../store/selectors';
 import { useNavigate, useParams } from 'react-router-dom';
-import { fetchOneTable,  save } from '../../store/actions/tableActions';
+import { fetchOneTable,  save, fetchTableList} from '../../store/actions/tableActions';
 import FormWrapper from '../../extra/FormWrapper';
 
 export default function TableForm() {
     const tableEdit = useSelector(selectTableEdit)
+    const list = useSelector(selectTableList)
     const dispatch = useDispatch();
     const navigate = useNavigate()
     const { id } = useParams();
-
+    const rules = getTableRules(list)
     function onFinish(value) {
         const table = {
             ...tableEdit,
@@ -24,7 +25,7 @@ export default function TableForm() {
     }
 
     return (
-        <FormWrapper editId={tableEdit?.id} id={id} singleFetch={fetchOneTable} >
+        <FormWrapper editId={tableEdit?.id} id={id} singleFetch={fetchOneTable} listFetch ={fetchTableList} list ={list} >
             <Row justify='center' className='margin-top-30'>
             <Col lg={8}
                 md={10}
@@ -37,7 +38,7 @@ export default function TableForm() {
                     <Form.Item
                         label="Number"
                         name="number"
-                        rules={tableRules.number}
+                        rules={rules}
                     >
                         <Input placeholder='Table Number' />
                     </Form.Item>

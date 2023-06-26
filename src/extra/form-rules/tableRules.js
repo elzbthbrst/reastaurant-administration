@@ -1,7 +1,17 @@
 const TABLE_TEMPLATE = /^\d{1,2}$/
 
-export const tableRules = {
-    'number': [
+export function getTableRules(list) {
+    return [
+        () => ({
+            validator(_, value) {
+                for(let table of list) {
+                    if(table.number === Number(value)) {
+                        return Promise.reject(new Error('You should create new table'));
+                    }
+                }
+                return Promise.resolve();
+            },
+        }),
         {
             pattern: TABLE_TEMPLATE,
             message: 'Must be not longer then 3 symbols'
@@ -10,6 +20,7 @@ export const tableRules = {
             required: true,
             message: 'Please input number of table!'
         },
-    ],
+
+    ]
 }
 

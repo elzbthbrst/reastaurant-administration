@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { Space, Spin } from 'antd';
 
-export default function FormWrapper ({ id, editId, singleFetch, listFetch, children, }) {
+export default function FormWrapper ({ id, editId, singleFetch, listFetch, list, children, }) {
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -10,10 +10,10 @@ export default function FormWrapper ({ id, editId, singleFetch, listFetch, child
             dispatch(singleFetch(id))
         }
 
-        if (listFetch) {
+        if (listFetch && !list) {
             dispatch(listFetch())
         }
-    }, [dispatch, id, editId, listFetch, singleFetch])
+    }, [dispatch, id, editId, listFetch, singleFetch, list])
 
     if (id && !editId) {
         return (
