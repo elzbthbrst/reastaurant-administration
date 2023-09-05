@@ -1,5 +1,5 @@
 export default class OrderApi {
-    static API = `https://mock-api-5678.nw.r.appspot.com/orders/`
+    static API = `https://mokapi-server.onrender.com/orders/`
     static request(url = '', method = 'GET', body) {
         return fetch(OrderApi.API + url, {
             method,

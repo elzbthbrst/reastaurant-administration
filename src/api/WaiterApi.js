@@ -1,5 +1,5 @@
 export default class WaiterApi {
-    static API = `https://mock-api-5678.nw.r.appspot.com/waiters/`
+    static API = `https://mokapi-server.onrender.com/waiters/`
     static request(url = '', method = 'GET', body) {
         return fetch(WaiterApi.API + url, {
             method,

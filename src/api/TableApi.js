@@ -1,5 +1,5 @@
 export default class TableApi {
-    static API = `https://mock-api-5678.nw.r.appspot.com/tables/`
+    static API = `https://mokapi-server.onrender.com/tables/`
     static request(url = '', method = 'GET', body) {
         return fetch(TableApi.API + url, {
             method,
